@@ -1,0 +1,1546 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AFTERLIGHT implemented API",
+    "version": "0.3.0",
+    "description": "現在実装済みのAPI。全更新は認証Cookie、同一Origin、JSON、操作版とIdempotencyキーで検証。"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "session": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "afterlight_session"
+      }
+    }
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "DB接続とmigrationのreadiness",
+        "responses": {
+          "200": {
+            "description": "ready"
+          },
+          "503": {
+            "description": "DB未接続またはmigration未適用"
+          }
+        }
+      }
+    },
+    "/api/auth": {
+      "post": {
+        "summary": "ゲスト開始・登録・ログイン・ログアウト",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "kind",
+                      "name"
+                    ],
+                    "properties": {
+                      "kind": {
+                        "const": "guest"
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 24
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "kind",
+                      "name",
+                      "handle",
+                      "password"
+                    ],
+                    "properties": {
+                      "kind": {
+                        "const": "register"
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 24
+                      },
+                      "handle": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9_]{3,24}$"
+                      },
+                      "password": {
+                        "type": "string",
+                        "minLength": 12,
+                        "maxLength": 128
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "kind",
+                      "handle",
+                      "password"
+                    ],
+                    "properties": {
+                      "kind": {
+                        "const": "login"
+                      },
+                      "handle": {
+                        "type": "string"
+                      },
+                      "password": {
+                        "type": "string",
+                        "minLength": 12,
+                        "maxLength": 128
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "kind"
+                    ],
+                    "properties": {
+                      "kind": {
+                        "const": "logout"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "HttpOnly Cookie設定・更新または削除"
+          },
+          "401": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/game": {
+      "get": {
+        "summary": "自分のプロフィール・所持・戦闘・交流を取得",
+        "security": [
+          {
+            "session": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Snapshot {profile, state, social}"
+          },
+          "401": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "型付きゲーム操作を原子的に確定",
+        "security": [
+          {
+            "session": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100,
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "battle.start"
+                      },
+                      "mode": {
+                        "type": "string",
+                        "enum": [
+                          "story",
+                          "tower",
+                          "corridor",
+                          "arena",
+                          "boss",
+                          "trial"
+                        ]
+                      },
+                      "questId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "opponent": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      },
+                      "supportPlayer": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "mode",
+                      "questId"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "battle.act"
+                      },
+                      "battleId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      },
+                      "seq": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "actor": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "target": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "attack",
+                          "skill",
+                          "guard"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "battleId",
+                      "seq",
+                      "actor",
+                      "target",
+                      "type"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "battle.support"
+                      },
+                      "battleId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      },
+                      "seq": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "target": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "battleId",
+                      "seq",
+                      "target"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "story.read"
+                      },
+                      "sceneId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "sceneId"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.echoCraft"
+                      },
+                      "itemKind": {
+                        "type": "string",
+                        "enum": [
+                          "weapon",
+                          "armor",
+                          "relic"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "itemKind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "battle.guard"
+                      },
+                      "battleId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      },
+                      "seq": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "battleId",
+                      "seq"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "battle.retreat"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "quest.sweep"
+                      },
+                      "questId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "count": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "questId",
+                      "count"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "unit.enhance"
+                      },
+                      "ids": {
+                        "minItems": 1,
+                        "maxItems": 100,
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        }
+                      },
+                      "delta": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "ids",
+                      "delta"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "unit.awaken"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "unit.skill"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "unit.branch"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "branch": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "const": 1
+                          },
+                          {
+                            "type": "number",
+                            "const": 2
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id",
+                      "branch"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "unit.exchange"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "party.save"
+                      },
+                      "ids": {
+                        "minItems": 5,
+                        "maxItems": 5,
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        }
+                      },
+                      "slot": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 2
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "ids",
+                      "slot"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "party.load"
+                      },
+                      "slot": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 2
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "slot"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "support.set"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.enhance"
+                      },
+                      "ids": {
+                        "minItems": 1,
+                        "maxItems": 100,
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        }
+                      },
+                      "delta": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "ids",
+                      "delta"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.set"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "owner": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 80
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id",
+                      "owner"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.lock"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "locked": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id",
+                      "locked"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.craft"
+                      },
+                      "itemKind": {
+                        "type": "string",
+                        "enum": [
+                          "weapon",
+                          "armor",
+                          "relic"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "itemKind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.reforge"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "trait": {
+                        "type": "string",
+                        "enum": [
+                          "atk",
+                          "hp",
+                          "def"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id",
+                      "trait"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "equip.recycle"
+                      },
+                      "ids": {
+                        "minItems": 1,
+                        "maxItems": 100,
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        }
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "gacha.draw"
+                      },
+                      "count": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "const": 1
+                          },
+                          {
+                            "type": "number",
+                            "const": 10
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "count"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "daily.claim"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "achievement.claim"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "story.choose"
+                      },
+                      "chapter": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 12
+                      },
+                      "choice": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "const": 0
+                          },
+                          {
+                            "type": "number",
+                            "const": 1
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "chapter",
+                      "choice"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "friend.request"
+                      },
+                      "code": {
+                        "type": "string",
+                        "pattern": "^\\d{9}$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "code"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "friend.accept"
+                      },
+                      "requestId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "requestId"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "friend.remove"
+                      },
+                      "target": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "target"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "friend.block"
+                      },
+                      "target": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "target"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "friend.unblock"
+                      },
+                      "target": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "target"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.create"
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 24
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "name"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.join"
+                      },
+                      "guildId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "guildId"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.leave"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.contribute"
+                      },
+                      "amount": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "const": 10
+                          },
+                          {
+                            "type": "number",
+                            "const": 50
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "amount"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.stamp"
+                      },
+                      "stamp": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind",
+                      "stamp"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "expectedVersion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "kind": {
+                        "type": "string",
+                        "const": "guild.claim"
+                      }
+                    },
+                    "required": [
+                      "expectedVersion",
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Snapshot {profile, state, social}; 同じキー/bodyは同じ確定応答"
+          },
+          "401": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "拒否された更新はデータを変更しない",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

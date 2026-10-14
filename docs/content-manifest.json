@@ -1,0 +1,2746 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": "まだ降らない雨",
+      "location": "未明港"
+    },
+    {
+      "id": 2,
+      "title": "勝利のない城",
+      "location": "硝子砦"
+    },
+    {
+      "id": 3,
+      "title": "未刊の図書館",
+      "location": "逆頁書庫"
+    },
+    {
+      "id": 4,
+      "title": "朝を欠いた森",
+      "location": "暁欠樹海"
+    },
+    {
+      "id": 5,
+      "title": "宛先のない手紙",
+      "location": "空白郵路"
+    },
+    {
+      "id": 6,
+      "title": "止まるための駅",
+      "location": "零番線"
+    },
+    {
+      "id": 7,
+      "title": "飛ばなかった翼",
+      "location": "無風工房"
+    },
+    {
+      "id": 8,
+      "title": "明日を売らない市",
+      "location": "無価市場"
+    },
+    {
+      "id": 9,
+      "title": "救出された災厄",
+      "location": "越境庭園"
+    },
+    {
+      "id": 10,
+      "title": "地上の底",
+      "location": "鏡海"
+    },
+    {
+      "id": 11,
+      "title": "空白の主人公",
+      "location": "白紙庭"
+    },
+    {
+      "id": 12,
+      "title": "夜明けを分ける",
+      "location": "継承門"
+    }
+  ],
+  "units": [
+    {
+      "id": "u01",
+      "name": "リュカ",
+      "rarity": "SSR",
+      "element": "wind",
+      "role": "link",
+      "image": "u01",
+      "quote": "その未来にも、帰る場所を描こう。",
+      "branches": [
+        "探路者",
+        "境界修復師"
+      ],
+      "skillName": "未明の道標"
+    },
+    {
+      "id": "u02",
+      "name": "ガラン",
+      "rarity": "SR",
+      "element": "fire",
+      "role": "tank",
+      "image": "u02",
+      "quote": "勝たなかった日のことを、忘れたくない。",
+      "branches": [
+        "門番",
+        "反撃騎士"
+      ],
+      "skillName": "帰郷の盾"
+    },
+    {
+      "id": "u03",
+      "name": "セナ",
+      "rarity": "SR",
+      "element": "water",
+      "role": "heal",
+      "image": "u03",
+      "quote": "誰も読まなかった物語を、あなたへ。",
+      "branches": [
+        "記憶保存",
+        "記憶譲渡"
+      ],
+      "skillName": "頁をめくる光"
+    },
+    {
+      "id": "u04",
+      "name": "ノア",
+      "rarity": "SSR",
+      "element": "shadow",
+      "role": "debuff",
+      "image": "u04",
+      "quote": "明日は決まっていない。それが救いだ。",
+      "branches": [
+        "因果遮断",
+        "遅延観測"
+      ],
+      "skillName": "予言の空白"
+    },
+    {
+      "id": "u05",
+      "name": "イオ",
+      "rarity": "R",
+      "element": "light",
+      "role": "support",
+      "image": "u05",
+      "quote": "飛ばなかった翼に、次の空を。",
+      "branches": [
+        "軌道技師",
+        "継承鍛冶"
+      ],
+      "skillName": "飛翔機関"
+    },
+    {
+      "id": "u06",
+      "name": "エル",
+      "rarity": "R",
+      "element": "wind",
+      "role": "heal",
+      "image": "u06",
+      "quote": "朝がなくても、花は待っている。",
+      "branches": [
+        "夜の庭師",
+        "種の運び手"
+      ],
+      "skillName": "根の約束"
+    },
+    {
+      "id": "u07",
+      "name": "ミラ",
+      "rarity": "SR",
+      "element": "water",
+      "role": "link",
+      "image": "u07",
+      "quote": "宛先のない手紙も、捨てはしない。",
+      "branches": [
+        "空白の配達人",
+        "橋の番人"
+      ],
+      "skillName": "宛先への流星"
+    },
+    {
+      "id": "u08",
+      "name": "オルド",
+      "rarity": "R",
+      "element": "fire",
+      "role": "tank",
+      "image": "u08",
+      "quote": "誰も通らない門だって、守る価値がある。",
+      "branches": [
+        "門の槍兵",
+        "流浪の衛士"
+      ],
+      "skillName": "閉じない門"
+    },
+    {
+      "id": "u09",
+      "name": "アステル",
+      "rarity": "SSR",
+      "element": "light",
+      "role": "support",
+      "image": "u09",
+      "quote": "消えた星を、見なかったことにはできない。",
+      "branches": [
+        "夜明け観測",
+        "星座編纂"
+      ],
+      "skillName": "星の帰路"
+    },
+    {
+      "id": "u10",
+      "name": "レイス",
+      "rarity": "SR",
+      "element": "shadow",
+      "role": "debuff",
+      "image": "u10",
+      "quote": "終わりの先に、まだ道がある。",
+      "branches": [
+        "鏡海の潜行者",
+        "境界の剣客"
+      ],
+      "skillName": "映らない刃"
+    },
+    {
+      "id": "u11",
+      "name": "ユスティア",
+      "rarity": "SSR",
+      "element": "light",
+      "role": "tank",
+      "image": "u11",
+      "quote": "選ぶことを、もう罪にはしない。",
+      "branches": [
+        "安寧の審判",
+        "未来の仲裁者"
+      ],
+      "skillName": "選択の赦し"
+    }
+  ],
+  "quests": [
+    {
+      "id": "ch01-01",
+      "chapter": 1,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 5
+    },
+    {
+      "id": "ch01-02",
+      "chapter": 1,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 5
+    },
+    {
+      "id": "ch01-03",
+      "chapter": 1,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 6
+    },
+    {
+      "id": "ch01-04",
+      "chapter": 1,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 6
+    },
+    {
+      "id": "ch01-05",
+      "chapter": 1,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 6
+    },
+    {
+      "id": "ch01-06",
+      "chapter": 1,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 7
+    },
+    {
+      "id": "ch01-07",
+      "chapter": 1,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 7
+    },
+    {
+      "id": "ch01-08",
+      "chapter": 1,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 7
+    },
+    {
+      "id": "ch01-09",
+      "chapter": 1,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 8
+    },
+    {
+      "id": "ch01-10",
+      "chapter": 1,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 8
+    },
+    {
+      "id": "ch01-11",
+      "chapter": 1,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 9
+    },
+    {
+      "id": "ch01-12",
+      "chapter": 1,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 9
+    },
+    {
+      "id": "ch01-13",
+      "chapter": 1,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 9
+    },
+    {
+      "id": "ch01-14",
+      "chapter": 1,
+      "stage": 14,
+      "kind": "boss",
+      "name": "未明港の守護者",
+      "recommendedLevel": 10
+    },
+    {
+      "id": "ch02-01",
+      "chapter": 2,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 11
+    },
+    {
+      "id": "ch02-02",
+      "chapter": 2,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 12
+    },
+    {
+      "id": "ch02-03",
+      "chapter": 2,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 12
+    },
+    {
+      "id": "ch02-04",
+      "chapter": 2,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 12
+    },
+    {
+      "id": "ch02-05",
+      "chapter": 2,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 13
+    },
+    {
+      "id": "ch02-06",
+      "chapter": 2,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 13
+    },
+    {
+      "id": "ch02-07",
+      "chapter": 2,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 13
+    },
+    {
+      "id": "ch02-08",
+      "chapter": 2,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 14
+    },
+    {
+      "id": "ch02-09",
+      "chapter": 2,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 14
+    },
+    {
+      "id": "ch02-10",
+      "chapter": 2,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 14
+    },
+    {
+      "id": "ch02-11",
+      "chapter": 2,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 15
+    },
+    {
+      "id": "ch02-12",
+      "chapter": 2,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 15
+    },
+    {
+      "id": "ch02-13",
+      "chapter": 2,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 15
+    },
+    {
+      "id": "ch02-14",
+      "chapter": 2,
+      "stage": 14,
+      "kind": "boss",
+      "name": "硝子砦の守護者",
+      "recommendedLevel": 16
+    },
+    {
+      "id": "ch03-01",
+      "chapter": 3,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 17
+    },
+    {
+      "id": "ch03-02",
+      "chapter": 3,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 18
+    },
+    {
+      "id": "ch03-03",
+      "chapter": 3,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 18
+    },
+    {
+      "id": "ch03-04",
+      "chapter": 3,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 18
+    },
+    {
+      "id": "ch03-05",
+      "chapter": 3,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 19
+    },
+    {
+      "id": "ch03-06",
+      "chapter": 3,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 19
+    },
+    {
+      "id": "ch03-07",
+      "chapter": 3,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 20
+    },
+    {
+      "id": "ch03-08",
+      "chapter": 3,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 20
+    },
+    {
+      "id": "ch03-09",
+      "chapter": 3,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 20
+    },
+    {
+      "id": "ch03-10",
+      "chapter": 3,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 21
+    },
+    {
+      "id": "ch03-11",
+      "chapter": 3,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 21
+    },
+    {
+      "id": "ch03-12",
+      "chapter": 3,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 21
+    },
+    {
+      "id": "ch03-13",
+      "chapter": 3,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 22
+    },
+    {
+      "id": "ch03-14",
+      "chapter": 3,
+      "stage": 14,
+      "kind": "boss",
+      "name": "逆頁書庫の守護者",
+      "recommendedLevel": 22
+    },
+    {
+      "id": "ch04-01",
+      "chapter": 4,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 24
+    },
+    {
+      "id": "ch04-02",
+      "chapter": 4,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 24
+    },
+    {
+      "id": "ch04-03",
+      "chapter": 4,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 24
+    },
+    {
+      "id": "ch04-04",
+      "chapter": 4,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 25
+    },
+    {
+      "id": "ch04-05",
+      "chapter": 4,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 25
+    },
+    {
+      "id": "ch04-06",
+      "chapter": 4,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 25
+    },
+    {
+      "id": "ch04-07",
+      "chapter": 4,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 26
+    },
+    {
+      "id": "ch04-08",
+      "chapter": 4,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 26
+    },
+    {
+      "id": "ch04-09",
+      "chapter": 4,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 26
+    },
+    {
+      "id": "ch04-10",
+      "chapter": 4,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 27
+    },
+    {
+      "id": "ch04-11",
+      "chapter": 4,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 27
+    },
+    {
+      "id": "ch04-12",
+      "chapter": 4,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 27
+    },
+    {
+      "id": "ch04-13",
+      "chapter": 4,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 28
+    },
+    {
+      "id": "ch04-14",
+      "chapter": 4,
+      "stage": 14,
+      "kind": "boss",
+      "name": "暁欠樹海の守護者",
+      "recommendedLevel": 28
+    },
+    {
+      "id": "ch05-01",
+      "chapter": 5,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 30
+    },
+    {
+      "id": "ch05-02",
+      "chapter": 5,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 30
+    },
+    {
+      "id": "ch05-03",
+      "chapter": 5,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 31
+    },
+    {
+      "id": "ch05-04",
+      "chapter": 5,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 31
+    },
+    {
+      "id": "ch05-05",
+      "chapter": 5,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 31
+    },
+    {
+      "id": "ch05-06",
+      "chapter": 5,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 32
+    },
+    {
+      "id": "ch05-07",
+      "chapter": 5,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 32
+    },
+    {
+      "id": "ch05-08",
+      "chapter": 5,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 32
+    },
+    {
+      "id": "ch05-09",
+      "chapter": 5,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 33
+    },
+    {
+      "id": "ch05-10",
+      "chapter": 5,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 33
+    },
+    {
+      "id": "ch05-11",
+      "chapter": 5,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 33
+    },
+    {
+      "id": "ch05-12",
+      "chapter": 5,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 34
+    },
+    {
+      "id": "ch05-13",
+      "chapter": 5,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 34
+    },
+    {
+      "id": "ch05-14",
+      "chapter": 5,
+      "stage": 14,
+      "kind": "boss",
+      "name": "空白郵路の守護者",
+      "recommendedLevel": 34
+    },
+    {
+      "id": "ch06-01",
+      "chapter": 6,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 36
+    },
+    {
+      "id": "ch06-02",
+      "chapter": 6,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 36
+    },
+    {
+      "id": "ch06-03",
+      "chapter": 6,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 37
+    },
+    {
+      "id": "ch06-04",
+      "chapter": 6,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 37
+    },
+    {
+      "id": "ch06-05",
+      "chapter": 6,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 37
+    },
+    {
+      "id": "ch06-06",
+      "chapter": 6,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 38
+    },
+    {
+      "id": "ch06-07",
+      "chapter": 6,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 38
+    },
+    {
+      "id": "ch06-08",
+      "chapter": 6,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 38
+    },
+    {
+      "id": "ch06-09",
+      "chapter": 6,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 39
+    },
+    {
+      "id": "ch06-10",
+      "chapter": 6,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 39
+    },
+    {
+      "id": "ch06-11",
+      "chapter": 6,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 40
+    },
+    {
+      "id": "ch06-12",
+      "chapter": 6,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 40
+    },
+    {
+      "id": "ch06-13",
+      "chapter": 6,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 40
+    },
+    {
+      "id": "ch06-14",
+      "chapter": 6,
+      "stage": 14,
+      "kind": "boss",
+      "name": "零番線の守護者",
+      "recommendedLevel": 41
+    },
+    {
+      "id": "ch07-01",
+      "chapter": 7,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 42
+    },
+    {
+      "id": "ch07-02",
+      "chapter": 7,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 43
+    },
+    {
+      "id": "ch07-03",
+      "chapter": 7,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 43
+    },
+    {
+      "id": "ch07-04",
+      "chapter": 7,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 43
+    },
+    {
+      "id": "ch07-05",
+      "chapter": 7,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 44
+    },
+    {
+      "id": "ch07-06",
+      "chapter": 7,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 44
+    },
+    {
+      "id": "ch07-07",
+      "chapter": 7,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 44
+    },
+    {
+      "id": "ch07-08",
+      "chapter": 7,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 45
+    },
+    {
+      "id": "ch07-09",
+      "chapter": 7,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 45
+    },
+    {
+      "id": "ch07-10",
+      "chapter": 7,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 45
+    },
+    {
+      "id": "ch07-11",
+      "chapter": 7,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 46
+    },
+    {
+      "id": "ch07-12",
+      "chapter": 7,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 46
+    },
+    {
+      "id": "ch07-13",
+      "chapter": 7,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 46
+    },
+    {
+      "id": "ch07-14",
+      "chapter": 7,
+      "stage": 14,
+      "kind": "boss",
+      "name": "無風工房の守護者",
+      "recommendedLevel": 47
+    },
+    {
+      "id": "ch08-01",
+      "chapter": 8,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 48
+    },
+    {
+      "id": "ch08-02",
+      "chapter": 8,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 49
+    },
+    {
+      "id": "ch08-03",
+      "chapter": 8,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 49
+    },
+    {
+      "id": "ch08-04",
+      "chapter": 8,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 49
+    },
+    {
+      "id": "ch08-05",
+      "chapter": 8,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 50
+    },
+    {
+      "id": "ch08-06",
+      "chapter": 8,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 50
+    },
+    {
+      "id": "ch08-07",
+      "chapter": 8,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 51
+    },
+    {
+      "id": "ch08-08",
+      "chapter": 8,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 51
+    },
+    {
+      "id": "ch08-09",
+      "chapter": 8,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 51
+    },
+    {
+      "id": "ch08-10",
+      "chapter": 8,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 52
+    },
+    {
+      "id": "ch08-11",
+      "chapter": 8,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 52
+    },
+    {
+      "id": "ch08-12",
+      "chapter": 8,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 52
+    },
+    {
+      "id": "ch08-13",
+      "chapter": 8,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 53
+    },
+    {
+      "id": "ch08-14",
+      "chapter": 8,
+      "stage": 14,
+      "kind": "boss",
+      "name": "無価市場の守護者",
+      "recommendedLevel": 53
+    },
+    {
+      "id": "ch09-01",
+      "chapter": 9,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 55
+    },
+    {
+      "id": "ch09-02",
+      "chapter": 9,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 55
+    },
+    {
+      "id": "ch09-03",
+      "chapter": 9,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 55
+    },
+    {
+      "id": "ch09-04",
+      "chapter": 9,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 56
+    },
+    {
+      "id": "ch09-05",
+      "chapter": 9,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 56
+    },
+    {
+      "id": "ch09-06",
+      "chapter": 9,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 56
+    },
+    {
+      "id": "ch09-07",
+      "chapter": 9,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 57
+    },
+    {
+      "id": "ch09-08",
+      "chapter": 9,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 57
+    },
+    {
+      "id": "ch09-09",
+      "chapter": 9,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 57
+    },
+    {
+      "id": "ch09-10",
+      "chapter": 9,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 58
+    },
+    {
+      "id": "ch09-11",
+      "chapter": 9,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 58
+    },
+    {
+      "id": "ch09-12",
+      "chapter": 9,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 58
+    },
+    {
+      "id": "ch09-13",
+      "chapter": 9,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 59
+    },
+    {
+      "id": "ch09-14",
+      "chapter": 9,
+      "stage": 14,
+      "kind": "boss",
+      "name": "越境庭園の守護者",
+      "recommendedLevel": 59
+    },
+    {
+      "id": "ch10-01",
+      "chapter": 10,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 61
+    },
+    {
+      "id": "ch10-02",
+      "chapter": 10,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 61
+    },
+    {
+      "id": "ch10-03",
+      "chapter": 10,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 62
+    },
+    {
+      "id": "ch10-04",
+      "chapter": 10,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 62
+    },
+    {
+      "id": "ch10-05",
+      "chapter": 10,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 62
+    },
+    {
+      "id": "ch10-06",
+      "chapter": 10,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 63
+    },
+    {
+      "id": "ch10-07",
+      "chapter": 10,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 63
+    },
+    {
+      "id": "ch10-08",
+      "chapter": 10,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 63
+    },
+    {
+      "id": "ch10-09",
+      "chapter": 10,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 64
+    },
+    {
+      "id": "ch10-10",
+      "chapter": 10,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 64
+    },
+    {
+      "id": "ch10-11",
+      "chapter": 10,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 64
+    },
+    {
+      "id": "ch10-12",
+      "chapter": 10,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 65
+    },
+    {
+      "id": "ch10-13",
+      "chapter": 10,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 65
+    },
+    {
+      "id": "ch10-14",
+      "chapter": 10,
+      "stage": 14,
+      "kind": "boss",
+      "name": "鏡海の守護者",
+      "recommendedLevel": 65
+    },
+    {
+      "id": "ch11-01",
+      "chapter": 11,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 67
+    },
+    {
+      "id": "ch11-02",
+      "chapter": 11,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 67
+    },
+    {
+      "id": "ch11-03",
+      "chapter": 11,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 68
+    },
+    {
+      "id": "ch11-04",
+      "chapter": 11,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 68
+    },
+    {
+      "id": "ch11-05",
+      "chapter": 11,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 68
+    },
+    {
+      "id": "ch11-06",
+      "chapter": 11,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 69
+    },
+    {
+      "id": "ch11-07",
+      "chapter": 11,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 69
+    },
+    {
+      "id": "ch11-08",
+      "chapter": 11,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 69
+    },
+    {
+      "id": "ch11-09",
+      "chapter": 11,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 70
+    },
+    {
+      "id": "ch11-10",
+      "chapter": 11,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 70
+    },
+    {
+      "id": "ch11-11",
+      "chapter": 11,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 71
+    },
+    {
+      "id": "ch11-12",
+      "chapter": 11,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 71
+    },
+    {
+      "id": "ch11-13",
+      "chapter": 11,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 71
+    },
+    {
+      "id": "ch11-14",
+      "chapter": 11,
+      "stage": 14,
+      "kind": "boss",
+      "name": "白紙庭の守護者",
+      "recommendedLevel": 72
+    },
+    {
+      "id": "ch12-01",
+      "chapter": 12,
+      "stage": 1,
+      "kind": "normal",
+      "name": "未明の入口",
+      "recommendedLevel": 73
+    },
+    {
+      "id": "ch12-02",
+      "chapter": 12,
+      "stage": 2,
+      "kind": "normal",
+      "name": "消えた足跡",
+      "recommendedLevel": 74
+    },
+    {
+      "id": "ch12-03",
+      "chapter": 12,
+      "stage": 3,
+      "kind": "normal",
+      "name": "記録の灯",
+      "recommendedLevel": 74
+    },
+    {
+      "id": "ch12-04",
+      "chapter": 12,
+      "stage": 4,
+      "kind": "normal",
+      "name": "橋の向こう",
+      "recommendedLevel": 74
+    },
+    {
+      "id": "ch12-05",
+      "chapter": 12,
+      "stage": 5,
+      "kind": "normal",
+      "name": "選択の残響",
+      "recommendedLevel": 75
+    },
+    {
+      "id": "ch12-06",
+      "chapter": 12,
+      "stage": 6,
+      "kind": "normal",
+      "name": "静かな路地",
+      "recommendedLevel": 75
+    },
+    {
+      "id": "ch12-07",
+      "chapter": 12,
+      "stage": 7,
+      "kind": "normal",
+      "name": "閉じた時計",
+      "recommendedLevel": 75
+    },
+    {
+      "id": "ch12-08",
+      "chapter": 12,
+      "stage": 8,
+      "kind": "normal",
+      "name": "記憶の岸",
+      "recommendedLevel": 76
+    },
+    {
+      "id": "ch12-09",
+      "chapter": 12,
+      "stage": 9,
+      "kind": "normal",
+      "name": "ほどける空",
+      "recommendedLevel": 76
+    },
+    {
+      "id": "ch12-10",
+      "chapter": 12,
+      "stage": 10,
+      "kind": "normal",
+      "name": "帰路の標",
+      "recommendedLevel": 76
+    },
+    {
+      "id": "ch12-11",
+      "chapter": 12,
+      "stage": 11,
+      "kind": "normal",
+      "name": "星の境界",
+      "recommendedLevel": 77
+    },
+    {
+      "id": "ch12-12",
+      "chapter": 12,
+      "stage": 12,
+      "kind": "normal",
+      "name": "最後の道",
+      "recommendedLevel": 77
+    },
+    {
+      "id": "ch12-13",
+      "chapter": 12,
+      "stage": 13,
+      "kind": "elite",
+      "name": "境界の試練",
+      "recommendedLevel": 77
+    },
+    {
+      "id": "ch12-14",
+      "chapter": 12,
+      "stage": 14,
+      "kind": "boss",
+      "name": "継承門の守護者",
+      "recommendedLevel": 78
+    }
+  ],
+  "bosses": [
+    {
+      "id": "echo-1-1",
+      "name": "止まらない機関・残響",
+      "image": "enemy01",
+      "element": "fire",
+      "gimmick": "revenge",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "HP半分で機関が加速。攻撃力が上がり、単体技の連打へ移る。",
+      "rule": "overdrive"
+    },
+    {
+      "id": "echo-1-2",
+      "name": "止まらない機関・深層",
+      "image": "enemy01",
+      "element": "fire",
+      "gimmick": "revenge",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "HP半分で機関が加速。攻撃力が上がり、単体技の連打へ移る。",
+      "rule": "overdrive"
+    },
+    {
+      "id": "echo-1-3",
+      "name": "止まらない機関・逆転",
+      "image": "enemy01",
+      "element": "fire",
+      "gimmick": "revenge",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "HP半分で機関が加速。攻撃力が上がり、単体技の連打へ移る。",
+      "rule": "overdrive"
+    },
+    {
+      "id": "echo-1-4",
+      "name": "止まらない機関・未明",
+      "image": "enemy01",
+      "element": "fire",
+      "gimmick": "revenge",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "HP半分で機関が加速。攻撃力が上がり、単体技の連打へ移る。",
+      "rule": "overdrive"
+    },
+    {
+      "id": "echo-2-1",
+      "name": "未刊の司書・残響",
+      "image": "enemy02",
+      "element": "water",
+      "gimmick": "seal",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "3ターンごとに全員の必殺ゲージを削る。必殺の順番と支援が鍵。",
+      "rule": "silence"
+    },
+    {
+      "id": "echo-2-2",
+      "name": "未刊の司書・深層",
+      "image": "enemy02",
+      "element": "water",
+      "gimmick": "seal",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "3ターンごとに全員の必殺ゲージを削る。必殺の順番と支援が鍵。",
+      "rule": "silence"
+    },
+    {
+      "id": "echo-2-3",
+      "name": "未刊の司書・逆転",
+      "image": "enemy02",
+      "element": "water",
+      "gimmick": "seal",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "3ターンごとに全員の必殺ゲージを削る。必殺の順番と支援が鍵。",
+      "rule": "silence"
+    },
+    {
+      "id": "echo-2-4",
+      "name": "未刊の司書・未明",
+      "image": "enemy02",
+      "element": "water",
+      "gimmick": "seal",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "3ターンごとに全員の必殺ゲージを削る。必殺の順番と支援が鍵。",
+      "rule": "silence"
+    },
+    {
+      "id": "echo-3-1",
+      "name": "根を忘れた鹿・残響",
+      "image": "enemy03",
+      "element": "wind",
+      "gimmick": "roots",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "根の毒が徐々に強まる。長期戦になる前にブレイクを重ねよう。",
+      "rule": "poison"
+    },
+    {
+      "id": "echo-3-2",
+      "name": "根を忘れた鹿・深層",
+      "image": "enemy03",
+      "element": "wind",
+      "gimmick": "roots",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "根の毒が徐々に強まる。長期戦になる前にブレイクを重ねよう。",
+      "rule": "poison"
+    },
+    {
+      "id": "echo-3-3",
+      "name": "根を忘れた鹿・逆転",
+      "image": "enemy03",
+      "element": "wind",
+      "gimmick": "roots",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "根の毒が徐々に強まる。長期戦になる前にブレイクを重ねよう。",
+      "rule": "poison"
+    },
+    {
+      "id": "echo-3-4",
+      "name": "根を忘れた鹿・未明",
+      "image": "enemy03",
+      "element": "wind",
+      "gimmick": "roots",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "根の毒が徐々に強まる。長期戦になる前にブレイクを重ねよう。",
+      "rule": "poison"
+    },
+    {
+      "id": "echo-4-1",
+      "name": "選ばない審判・残響",
+      "image": "enemy04",
+      "element": "light",
+      "gimmick": "judge",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "偶数ターンに障壁を回復。防御を固めるだけでは削り切れない。",
+      "rule": "judgement"
+    },
+    {
+      "id": "echo-4-2",
+      "name": "選ばない審判・深層",
+      "image": "enemy04",
+      "element": "light",
+      "gimmick": "judge",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "偶数ターンに障壁を回復。防御を固めるだけでは削り切れない。",
+      "rule": "judgement"
+    },
+    {
+      "id": "echo-4-3",
+      "name": "選ばない審判・逆転",
+      "image": "enemy04",
+      "element": "light",
+      "gimmick": "judge",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "偶数ターンに障壁を回復。防御を固めるだけでは削り切れない。",
+      "rule": "judgement"
+    },
+    {
+      "id": "echo-4-4",
+      "name": "選ばない審判・未明",
+      "image": "enemy04",
+      "element": "light",
+      "gimmick": "judge",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "偶数ターンに障壁を回復。防御を固めるだけでは削り切れない。",
+      "rule": "judgement"
+    },
+    {
+      "id": "echo-5-1",
+      "name": "映らない海蛇・残響",
+      "image": "enemy05",
+      "element": "shadow",
+      "gimmick": "mirror",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "偶数ターンの攻撃に反射。ブレイクで反射を止められる。",
+      "rule": "reflection"
+    },
+    {
+      "id": "echo-5-2",
+      "name": "映らない海蛇・深層",
+      "image": "enemy05",
+      "element": "shadow",
+      "gimmick": "mirror",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "偶数ターンの攻撃に反射。ブレイクで反射を止められる。",
+      "rule": "reflection"
+    },
+    {
+      "id": "echo-5-3",
+      "name": "映らない海蛇・逆転",
+      "image": "enemy05",
+      "element": "shadow",
+      "gimmick": "mirror",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "偶数ターンの攻撃に反射。ブレイクで反射を止められる。",
+      "rule": "reflection"
+    },
+    {
+      "id": "echo-5-4",
+      "name": "映らない海蛇・未明",
+      "image": "enemy05",
+      "element": "shadow",
+      "gimmick": "mirror",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "偶数ターンの攻撃に反射。ブレイクで反射を止められる。",
+      "rule": "reflection"
+    },
+    {
+      "id": "echo-6-1",
+      "name": "帰路のない衛士・残響",
+      "image": "enemy06",
+      "element": "fire",
+      "gimmick": "plain",
+      "tier": 0,
+      "level": 35,
+      "unlock": 42,
+      "description": "高い防御で攻撃を受け止め、半分以下で障壁を張り直す。",
+      "rule": "bulwark"
+    },
+    {
+      "id": "echo-6-2",
+      "name": "帰路のない衛士・深層",
+      "image": "enemy06",
+      "element": "fire",
+      "gimmick": "plain",
+      "tier": 1,
+      "level": 50,
+      "unlock": 70,
+      "description": "高い防御で攻撃を受け止め、半分以下で障壁を張り直す。",
+      "rule": "bulwark"
+    },
+    {
+      "id": "echo-6-3",
+      "name": "帰路のない衛士・逆転",
+      "image": "enemy06",
+      "element": "fire",
+      "gimmick": "plain",
+      "tier": 2,
+      "level": 65,
+      "unlock": 98,
+      "description": "高い防御で攻撃を受け止め、半分以下で障壁を張り直す。",
+      "rule": "bulwark"
+    },
+    {
+      "id": "echo-6-4",
+      "name": "帰路のない衛士・未明",
+      "image": "enemy06",
+      "element": "fire",
+      "gimmick": "plain",
+      "tier": 3,
+      "level": 80,
+      "unlock": 126,
+      "description": "高い防御で攻撃を受け止め、半分以下で障壁を張り直す。",
+      "rule": "bulwark"
+    }
+  ],
+  "trials": [
+    {
+      "id": "forge-1-1",
+      "name": "刃の記録 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "weapon",
+      "threshold": 4,
+      "description": "編成中の武器を+4以上に強化。"
+    },
+    {
+      "id": "forge-1-2",
+      "name": "刃の記録 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "weapon",
+      "threshold": 8,
+      "description": "編成中の武器を+8以上に強化。"
+    },
+    {
+      "id": "forge-1-3",
+      "name": "刃の記録 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "weapon",
+      "threshold": 12,
+      "description": "編成中の武器を+12以上に強化。"
+    },
+    {
+      "id": "forge-1-4",
+      "name": "刃の記録 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "weapon",
+      "threshold": 16,
+      "description": "編成中の武器を+16以上に強化。"
+    },
+    {
+      "id": "forge-1-5",
+      "name": "刃の記録 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "weapon",
+      "threshold": 20,
+      "description": "編成中の武器を+20以上に強化。"
+    },
+    {
+      "id": "forge-2-1",
+      "name": "盾の記録 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "armor",
+      "threshold": 4,
+      "description": "編成中の守具を+4以上に強化。"
+    },
+    {
+      "id": "forge-2-2",
+      "name": "盾の記録 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "armor",
+      "threshold": 8,
+      "description": "編成中の守具を+8以上に強化。"
+    },
+    {
+      "id": "forge-2-3",
+      "name": "盾の記録 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "armor",
+      "threshold": 12,
+      "description": "編成中の守具を+12以上に強化。"
+    },
+    {
+      "id": "forge-2-4",
+      "name": "盾の記録 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "armor",
+      "threshold": 16,
+      "description": "編成中の守具を+16以上に強化。"
+    },
+    {
+      "id": "forge-2-5",
+      "name": "盾の記録 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "armor",
+      "threshold": 20,
+      "description": "編成中の守具を+20以上に強化。"
+    },
+    {
+      "id": "forge-3-1",
+      "name": "星儀の記録 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "relic",
+      "threshold": 4,
+      "description": "編成中の遺物を+4以上に強化。"
+    },
+    {
+      "id": "forge-3-2",
+      "name": "星儀の記録 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "relic",
+      "threshold": 8,
+      "description": "編成中の遺物を+8以上に強化。"
+    },
+    {
+      "id": "forge-3-3",
+      "name": "星儀の記録 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "relic",
+      "threshold": 12,
+      "description": "編成中の遺物を+12以上に強化。"
+    },
+    {
+      "id": "forge-3-4",
+      "name": "星儀の記録 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "relic",
+      "threshold": 16,
+      "description": "編成中の遺物を+16以上に強化。"
+    },
+    {
+      "id": "forge-3-5",
+      "name": "星儀の記録 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "relic",
+      "threshold": 20,
+      "description": "編成中の遺物を+20以上に強化。"
+    },
+    {
+      "id": "forge-4-1",
+      "name": "役割の織物 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "roles",
+      "threshold": 3,
+      "description": "編成に3種類以上の役割を含める。"
+    },
+    {
+      "id": "forge-4-2",
+      "name": "役割の織物 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "roles",
+      "threshold": 3,
+      "description": "編成に3種類以上の役割を含める。"
+    },
+    {
+      "id": "forge-4-3",
+      "name": "役割の織物 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "roles",
+      "threshold": 4,
+      "description": "編成に4種類以上の役割を含める。"
+    },
+    {
+      "id": "forge-4-4",
+      "name": "役割の織物 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "roles",
+      "threshold": 4,
+      "description": "編成に4種類以上の役割を含める。"
+    },
+    {
+      "id": "forge-4-5",
+      "name": "役割の織物 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "roles",
+      "threshold": 5,
+      "description": "編成に5種類以上の役割を含める。"
+    },
+    {
+      "id": "forge-5-1",
+      "name": "別人生の灯 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "branch",
+      "threshold": 1,
+      "description": "別人生ノード1以上の継承者を編成。"
+    },
+    {
+      "id": "forge-5-2",
+      "name": "別人生の灯 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "branch",
+      "threshold": 2,
+      "description": "別人生ノード2以上の継承者を編成。"
+    },
+    {
+      "id": "forge-5-3",
+      "name": "別人生の灯 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "branch",
+      "threshold": 3,
+      "description": "別人生ノード3以上の継承者を編成。"
+    },
+    {
+      "id": "forge-5-4",
+      "name": "別人生の灯 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "branch",
+      "threshold": 4,
+      "description": "別人生ノード4以上の継承者を編成。"
+    },
+    {
+      "id": "forge-5-5",
+      "name": "別人生の灯 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "branch",
+      "threshold": 5,
+      "description": "別人生ノード5以上の継承者を編成。"
+    },
+    {
+      "id": "forge-6-1",
+      "name": "技の継承 1",
+      "level": 15,
+      "unlock": 14,
+      "rule": "skills",
+      "threshold": 2,
+      "description": "スキルLv.2以上の継承者を編成。"
+    },
+    {
+      "id": "forge-6-2",
+      "name": "技の継承 2",
+      "level": 27,
+      "unlock": 28,
+      "rule": "skills",
+      "threshold": 3,
+      "description": "スキルLv.3以上の継承者を編成。"
+    },
+    {
+      "id": "forge-6-3",
+      "name": "技の継承 3",
+      "level": 39,
+      "unlock": 42,
+      "rule": "skills",
+      "threshold": 4,
+      "description": "スキルLv.4以上の継承者を編成。"
+    },
+    {
+      "id": "forge-6-4",
+      "name": "技の継承 4",
+      "level": 51,
+      "unlock": 56,
+      "rule": "skills",
+      "threshold": 5,
+      "description": "スキルLv.5以上の継承者を編成。"
+    },
+    {
+      "id": "forge-6-5",
+      "name": "技の継承 5",
+      "level": 63,
+      "unlock": 70,
+      "rule": "skills",
+      "threshold": 6,
+      "description": "スキルLv.6以上の継承者を編成。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-1-1",
+      "chapter": 1,
+      "stage": 1,
+      "title": "濡れていない傘",
+      "portrait": "u01",
+      "paragraphs": [
+        "傘屋の店主は、誰も買わない傘を開いていた。港へ来た人は必ず空を見上げるが、傘を手に取る人はいない。リュカが一本を閉じると、その下にだけ薄い雨の跡が残った。",
+        "「雨が降らないのに、どうして傘を売っているんですか」あなたが尋ねると、店主は骨を一本ずつ確かめた。「濡れた人が帰ってくるかもしれないでしょう」",
+        "店主が待っているのは客ではなかった。出かけた娘が、雨を理由に早く帰るはずだった未来。この街では、叶わなかった小さな期待にも店を構える場所がある。"
+      ]
+    },
+    {
+      "id": "scene-1-4",
+      "chapter": 1,
+      "stage": 4,
+      "title": "時計台の仕事",
+      "portrait": "u07",
+      "paragraphs": [
+        "時計台の下には、文字を直すための小さな机があった。配達人ミラは机に座り、降る予定だった雨の時刻を塗り直している。消える文字を直す仕事は、住民に順番で回ってくるという。",
+        "「予報が外れたんじゃないよ。約束した人がまだ来ないんだ」ミラの手には、雨に濡れても滲まないインクがついていた。あなたはその手を見て、誰かの約束を修復する仕事があることを知った。",
+        "塗った文字はすぐに薄くなる。それでも次の担当者が椅子を引くまで、彼女は筆を置かなかった。港を救うとは、この交代の時間まで持ち帰ることなのかもしれない。"
+      ]
+    },
+    {
+      "id": "scene-1-8",
+      "chapter": 1,
+      "stage": 8,
+      "title": "名前の重さ",
+      "portrait": "u01",
+      "paragraphs": [
+        "避難を待つ人々は、大きな荷物を持っていなかった。靴屋は片方だけの靴を、船乗りは一度も使われなかった切符を抱えている。役に立たない物に見えて、どれも本人の暮らしを示す印だった。",
+        "地図に名前を書くと、その人が少しだけはっきりする。代わりに海岸線が薄くなった。人を確かにするぶん、場所が曖昧になる。余白は無限ではない。",
+        "リュカはあなたの筆を止めなかった。「正しい重さを量る道具はない。だから一人で決めないで」住民を地図の周りへ呼び、あなたたちは何を残すか話し始めた。"
+      ]
+    },
+    {
+      "id": "scene-1-12",
+      "chapter": 1,
+      "stage": 12,
+      "title": "帰るための灯り",
+      "portrait": "u02",
+      "paragraphs": [
+        "門の前で星骸が眠っていた。身体の隙間には、消えかけた灯台の光が流れている。兵士ガランは星骸を見て、剣を抜く前に盾を地面へ置いた。",
+        "「あれは人を逃がさないように立っているのか、それとも門が崩れないように立っているのか」同じ場所に立つものでも、その仕事は違う。あなたは初めて敵の背後を見た。",
+        "星骸を退かせれば門は開く。だが、代わりに門を支えるものが要る。ガランが盾を持ち上げ、リュカが地図を広げた。勝つための準備と、勝ったあとの準備を同時にする戦いが始まる。"
+      ]
+    },
+    {
+      "id": "scene-2-1",
+      "chapter": 2,
+      "stage": 1,
+      "title": "使われなかった訓練場",
+      "portrait": "u02",
+      "paragraphs": [
+        "硝子砦の訓練場には、武器の音がない。兵士たちは倒れた荷車を起こし、壊れた階段を運ぶ練習をしていた。戦争を知らない兵士の訓練を、あなたは笑いそうになってから恥じた。",
+        "ガランは重い梁を二人で持つよう指示した。「一人で運べる重さかどうかじゃない。一人が倒れても落とさない持ち方を覚えるんだ」",
+        "救出の門で必要になるのは、敵を倒す腕だけではない。あなたは荷車の後ろへ回り、持ち上げる側と支える側が交代するまで見ていた。"
+      ]
+    },
+    {
+      "id": "scene-2-4",
+      "chapter": 2,
+      "stage": 4,
+      "title": "空白の戦功",
+      "portrait": "u08",
+      "paragraphs": [
+        "廊下には戦功の記録板が並んでいた。名前の下はどれも白紙だ。衛士オルドは毎朝その白紙を拭く。「何も起きなかった日を、何もしていない日にしたくない」",
+        "あなたが記録を一行だけ書こうとすると、彼は首を振った。階段が直ったことも子どもが帰ったことも、一人の名前では足りない。英雄の欄へ入れると、残りの人が消えるという。",
+        "ガランが白紙の隅に小さな日付を書いた。何をしたかを決めつけない記録。それを見てオルドは、初めて拭く手を止めた。"
+      ]
+    },
+    {
+      "id": "scene-2-8",
+      "chapter": 2,
+      "stage": 8,
+      "title": "盾の裏側",
+      "portrait": "u02",
+      "paragraphs": [
+        "盾の裏には、擦れた地図が貼られていた。ガランは外から見える文字を指で隠し、裏の線をあなたへ見せる。砦の図ではない。長い一本の道と、その終点に小さな四角がある。",
+        "「ここで待っていた人がいた」彼はそれ以上言わなかった。あなたも聞かなかった。本人が話す順番を、地図を持っているというだけで奪いたくなかった。",
+        "セナは盾の縁を直しながら、古い糊の下にもう一枚の紙を見つける。紙には列車の時刻が記されていた。勝利の記念碑にある日付と同じ日だった。"
+      ]
+    },
+    {
+      "id": "scene-2-12",
+      "chapter": 2,
+      "stage": 12,
+      "title": "降伏しない門",
+      "portrait": "u08",
+      "paragraphs": [
+        "城門は敵に破られたのではない。支える土地がなくなって、下から割れていた。オルドは門の前に立つ人々を、正面から退かせないように誘導する。",
+        "「敵に向けるために作った盾を、今日は天井に向けろ」ガランの指示で兵士たちが盾を掲げた。降ってくる硝子は細かく、光だけを見るなら綺麗だった。",
+        "あなたは地図に退路を描きながら、その綺麗さを記録しないことにした。人の頭へ落ちてくる物を景色として残す前に、いまは人を通す必要があった。"
+      ]
+    },
+    {
+      "id": "scene-3-1",
+      "chapter": 3,
+      "stage": 1,
+      "title": "返却されなかった本",
+      "portrait": "u03",
+      "paragraphs": [
+        "セナが最初に探したのは、貴重な予言書ではなかった。貸出台帳の最後にある一冊の絵本。返す約束をした子どもが生まれない未来になり、本だけが待ち続けていた。",
+        "「返却期限を伸ばせばいい」あなたは言った。セナは台帳を閉じる。「期限をなくすと、約束した人がいたことまでなくなる」",
+        "彼女は台帳へ、今日も待っていると一行書いた。終わらない約束を背負うことと、誰かを責め続けることは違う。その違いを、司書は毎日確かめている。"
+      ]
+    },
+    {
+      "id": "scene-3-4",
+      "chapter": 3,
+      "stage": 4,
+      "title": "生まれない読者",
+      "portrait": "u06",
+      "paragraphs": [
+        "植物の図鑑には、まだ名前のない花が載っていた。庭師エルは花の色より、余白に描かれた小さな手の跡を見ている。誰かが図鑑を触る未来まで保存されていた。",
+        "セナはその頁を切り離すか迷った。花だけを持ち帰れば、図鑑を読んだ人の手は残らない。人の記録を守れば、花を育てる方法が欠ける。",
+        "エルが花の育て方を覚え、セナが手の跡を写すことになった。一冊を誰か一人で抱えるより、二人に分けるほうが遠くまで運べることもある。"
+      ]
+    },
+    {
+      "id": "scene-3-8",
+      "chapter": 3,
+      "stage": 8,
+      "title": "白紙の読み方",
+      "portrait": "u04",
+      "paragraphs": [
+        "あなたの伝記をノアは最後の頁から読んだ。何もない頁をめくる音が、書庫の奥でよく響く。読めないのではなく、書かれていないと彼は言った。",
+        "「空白を埋めるべき場所だと思うと、誰かが先に書きたくなる。でも空けておくことが仕事の場所もある」彼は予言をしなかった。あなたの次の言葉を聞くため、黙って本を返した。",
+        "表紙にはあなたの名前がある。本文がないことは、名前が嘘であることとは違う。あなたは初めて、白紙を欠陥でないものとして持ち歩くことにした。"
+      ]
+    },
+    {
+      "id": "scene-3-12",
+      "chapter": 3,
+      "stage": 12,
+      "title": "最後の貸出窓口",
+      "portrait": "u03",
+      "paragraphs": [
+        "門へ運べる本の数を決めるため、貸出窓口をもう一度開いた。住民は自分の人生の本より、隣に暮らした人の本を探した。",
+        "司書がいなくなれば、返す場所もなくなる。セナは本に住所の札を挟む。あなたたちの拠点を、返却先として書いた。",
+        "図書館を建物ごと守れなくても、窓口の仕事は運べる。セナが持つ鍵はもう書庫の扉に合わない。それでも彼女は、新しい窓口の引き出しへ入れるために鍵を残した。"
+      ]
+    },
+    {
+      "id": "scene-4-1",
+      "chapter": 4,
+      "stage": 1,
+      "title": "夜を食べる種",
+      "portrait": "u06",
+      "paragraphs": [
+        "エルは種を土へ埋めず、空の器へ入れた。夜の森では根がまず暗さを覚え、それから土地を選ぶ。あなたが器を窓際へ動かすと、種の光が弱くなった。",
+        "この森の生き物は、朝を知らないから不自由なのではない。夜で暮らすための体を持っている。別の場所の光を一方的に与えることは、親切とは限らなかった。",
+        "イオが器に薄い覆いを作る。何でも遠くへ運ぶ翼を作っていた職人が、今日は光を遠ざける道具を作っていた。"
+      ]
+    },
+    {
+      "id": "scene-4-4",
+      "chapter": 4,
+      "stage": 4,
+      "title": "眠らない番人",
+      "portrait": "u08",
+      "paragraphs": [
+        "根の鹿が何度も同じ場所へ戻ってくる。オルドは足跡を追い、鹿が人ではなく地面の裂け目を見ていることに気づいた。",
+        "鹿を追い払えば道は広がる。だが次の揺れで、その道は崩れるかもしれない。あなたは歩く場所だけでなく、歩かない場所も地図へ書いた。",
+        "通らないようにした道を前に、オルドは槍を横に寝かせた。守るとは、進む人を増やす仕事ばかりではない。止まれる理由を示すことも、その一つだった。"
+      ]
+    },
+    {
+      "id": "scene-4-8",
+      "chapter": 4,
+      "stage": 8,
+      "title": "鉢の底の故郷",
+      "portrait": "u06",
+      "paragraphs": [
+        "夜の土を少しずつ器へ入れると、森の地面がその分だけ浅くなった。持ち帰る故郷を増やすほど、故郷そのものは減っていく。",
+        "エルは自分の鉢を空にした。「全部の根を私だけの庭へ入れたくない」土を分けるため、住民に小さな器を配る。",
+        "鉢の底へ森の名を書いた。新しい場所で育つ花にも、どこから運ばれたかを忘れさせないためだ。いずれ根が広がるとき、その名が境界を決める助けになるだろう。"
+      ]
+    },
+    {
+      "id": "scene-4-12",
+      "chapter": 4,
+      "stage": 12,
+      "title": "朝への避難",
+      "portrait": "u05",
+      "paragraphs": [
+        "避難の門には、暗い布が幾重にも掛けられた。イオは布の間を歩き、光が漏れていないか確かめる。最後の一枚の先には地上の朝がある。",
+        "「朝まで渡れたら救出成功、ではないんだな」職人は新しい庭に必要な材料を数えた。日差しを遮るもの、水の流れ、夜を作る覆い。門を開ける前に準備できることが、まだあった。",
+        "あなたは出撃の地図とは別に、避難後の庭の図を描いた。戦闘に勝ってから考えるつもりだった場所を、先に仲間へ渡した。"
+      ]
+    },
+    {
+      "id": "scene-5-1",
+      "chapter": 5,
+      "stage": 1,
+      "title": "受取人のいない窓",
+      "portrait": "u07",
+      "paragraphs": [
+        "配達先の家には、手紙を入れる窓だけがあった。玄関も住民の姿もない。ミラは窓を閉じず、封筒を持ったまま座る。",
+        "「届かなかったのと、受け取りたくなかったのは違うよ」手紙の宛先を一つに戻せば、拒んだ人の意思まで消えてしまう。",
+        "あなたは窓の横に、受け取らないという札を書いた。その札にも地図の余白が必要だった。拒否を残すことが誰かを守る場合があると、ここで学ぶ。"
+      ]
+    },
+    {
+      "id": "scene-5-4",
+      "chapter": 5,
+      "stage": 4,
+      "title": "祝わなかった日",
+      "portrait": "u09",
+      "paragraphs": [
+        "祝いの手紙は、悲しい手紙より長く光っていた。観測者アステルは、その光の先にある暮らしを見ている。祝いを受けたら離れなくてはならなかった人もいるという。",
+        "「明るい未来なら救ってよい、暗い未来なら捨ててよい。その分け方をする前に、そこに住む人へ聞こう」彼女は封を勝手に開かなかった。",
+        "ミラが差出人のための机を置き、あなたが受取人のための椅子を出す。二人が同じ場所へ来られる未来だけを、いまは待つことにした。"
+      ]
+    },
+    {
+      "id": "scene-5-8",
+      "chapter": 5,
+      "stage": 8,
+      "title": "噛みつく封筒",
+      "portrait": "u10",
+      "paragraphs": [
+        "封筒の群れは、似た名前を持つ人を追いかけた。境界の剣客レイスは宛名を一字だけ変えて進もうとするが、すぐに足を止めた。",
+        "名前を変えれば自分は通れる。代わりに、その名を持つ別の誰かへ手紙が向かう。問題を移すことを、解決とは呼べなかった。",
+        "レイスは刃で封筒を切るのをやめ、宛先を探すための道を切り開いた。終わりを与えるより、問いを届ける仕事のほうが長くかかる。"
+      ]
+    },
+    {
+      "id": "scene-5-12",
+      "chapter": 5,
+      "stage": 12,
+      "title": "返事のない配達",
+      "portrait": "u07",
+      "paragraphs": [
+        "ミラは一通の手紙を自分の鞄へ戻した。配達人として最後まで届けたかった手紙。しかし宛先の人が、まだ受け取りたくないと言った。",
+        "「待っていることを、勝手に借りにしない」そう言って彼女は期限の札を外す。返事がないことも、一つの返事として守る必要があった。",
+        "あなたは地図の窓を少し大きく描いた。誰かが手紙を受け取りたいと思った日に、通れるように。その日を今日だと決める権利は、あなたにはない。"
+      ]
+    },
+    {
+      "id": "scene-6-1",
+      "chapter": 6,
+      "stage": 1,
+      "title": "到着だけの時刻表",
+      "portrait": "u02",
+      "paragraphs": [
+        "駅の時刻表をガランは手袋を外して触った。盾の裏の紙と同じ数字が並んでいる。あなたたちは彼が読めるように、その前から静かに退いた。",
+        "列車は逃げた人を運ぶはずだった。英雄の勝利で避難が不要と決まり、来ないことになった。その決定のあとも、駅で待つ人々の暮らしは続いていた。",
+        "勝った世界が正しいとしても、待っていた人の時間が嘘になるわけではない。ガランは盾を時刻表の下へ置き、ようやく駅の名を声に出した。"
+      ]
+    },
+    {
+      "id": "scene-6-4",
+      "chapter": 6,
+      "stage": 4,
+      "title": "ホームの食卓",
+      "portrait": "u03",
+      "paragraphs": [
+        "待合室には、持ち寄りの鍋が置かれていた。列車が来なかった最初の日、食べ物を捨てずに分けたのが始まりだったという。",
+        "セナは鍋の横の帳面を読む。何人を助けたという記録ではなく、誰が何を持ってきたかが書いてあった。誰も英雄の名前でまとめられていない。",
+        "砦の白紙の戦功板に書ききれなかった仕事が、この小さな帳面にはある。彼女は帳面を一冊だけ持ち帰り、新しい拠点でも同じ形式で使うことにした。"
+      ]
+    },
+    {
+      "id": "scene-6-8",
+      "chapter": 6,
+      "stage": 8,
+      "title": "勝利の陰の椅子",
+      "portrait": "u02",
+      "paragraphs": [
+        "ガランが座っていた椅子には、隣の席があった。そこで待った相手は、兵士が勝たない日なら生きて帰るはずだった人だった。",
+        "「俺が選んだせいで、別の誰かは帰れなかった」ガランは自分の未来を正しいものにしてほしいとは言わなかった。勝たなかった兵士にも、選択の責任が残る。",
+        "あなたは隣の席へ座った。埋まらない不在を、埋めたふりはしない。ただ彼が一人でそこを守らなくてよいように、しばらく待つ。"
+      ]
+    },
+    {
+      "id": "scene-6-12",
+      "chapter": 6,
+      "stage": 12,
+      "title": "止まることの許可",
+      "portrait": "u08",
+      "paragraphs": [
+        "避難の道を急ぐ人々へ、オルドはホームの椅子を運んだ。立ち止まると門に間に合わないと言われても、疲れた人の足は動かない。",
+        "門を支える兵士と、休む人の荷物を預かる兵士に仕事を分ける。進む速度が違う人を同じ列へ押し込まず、休んでから戻れる道を作った。",
+        "この駅が到着だけを書いていた理由を、あなたは少し理解した。次に出発する時刻を人から奪わないため。地図へ駅を写すとき、時刻の欄は空けておいた。"
+      ]
+    },
+    {
+      "id": "scene-7-1",
+      "chapter": 7,
+      "stage": 1,
+      "title": "風を造る日",
+      "portrait": "u05",
+      "paragraphs": [
+        "工房の鳥は翼を動かしても浮かなかった。イオは落ちた鳥を拾うと、翼ではなく周囲の空気を調べた。失敗を鳥のせいにする前に、世界の側を確かめる。",
+        "「場所が合わないなら、場所も直そう」夜の植物を運んだ覆いと同じ考え方だった。羽根を大きくするより、小さな風の通り道を造る。",
+        "あなたは工房の床に風の地図を描いた。いままで場所の境界だけを書いていた紙に、見えない流れを残す方法を覚える。"
+      ]
+    },
+    {
+      "id": "scene-7-4",
+      "chapter": 7,
+      "stage": 4,
+      "title": "二つ目の地上",
+      "portrait": "u09",
+      "paragraphs": [
+        "機械鳥が戻した映像には、知らない港が映っていた。人々は空を見上げ、あなたたちと同じ言葉で地上と呼んでいる。",
+        "アステルは映像の星を数えた。遠い世界に見えるのに、星の配置が同じだった。上下に隔たっているのでなく、別の選択のすぐ隣にあるのかもしれない。",
+        "イオは鳥の航路を隠さなかった。ただ公開する前に、誰が道を維持するのかを皆へ尋ねた。見つけた者一人の所有にすると、新しい壁になる。"
+      ]
+    },
+    {
+      "id": "scene-7-8",
+      "chapter": 7,
+      "stage": 8,
+      "title": "翼の修理屋",
+      "portrait": "u05",
+      "paragraphs": [
+        "工房には飛べない鳥だけを直す机があった。飛べるようにする机ではない。地面で歩くための脚や、雨を避ける覆いを取り付ける場所だ。",
+        "あなたが目的を聞くと、イオは鳥の横へしゃがんだ。「空に上がらなくても暮らせるだろ。みんな同じ完成形にする必要はない」",
+        "その机の工具を、彼は拠点へ運ぶことにした。救った住民を地上に合わせて変えるのでなく、住民に合う場所を直すための工具だった。"
+      ]
+    },
+    {
+      "id": "scene-7-12",
+      "chapter": 7,
+      "stage": 12,
+      "title": "帰還の印",
+      "portrait": "u01",
+      "paragraphs": [
+        "鳥をもう一度飛ばす前に、リュカは翼へ帰り道の線を刻んだ。見つけるだけの飛行と、戻って報告する飛行は違う。",
+        "あなたは地図の余白へ受け取りの場所を書いた。別の地上から運ばれる物を、勝手にこちらの資源と決めないために、出所と返却先を並べる。",
+        "鳥が運んできたのは小さな時計だった。雨の音がない時計。港で聞けなかった音の欠落が、ここでもあなたたちの道をつないでいる。"
+      ]
+    },
+    {
+      "id": "scene-8-1",
+      "chapter": 8,
+      "stage": 1,
+      "title": "価格のない日用品",
+      "portrait": "u11",
+      "paragraphs": [
+        "市場の靴はどれも同じ高さで、買う人に迷いはない。局員ユスティアは、選ばなくてよいことに救われた人を案内した。",
+        "「選べることが、いつも楽なわけではない」あなたは反論できなかった。足の不自由な人へ合う靴を毎朝用意する局の仕事は、確かに人を支えていた。",
+        "問題は、その靴以外を選びたいと思った日にあった。棚に別の形はなく、作る材料も局が保管している。保護と制限は同じ窓口から渡されていた。"
+      ]
+    },
+    {
+      "id": "scene-8-4",
+      "chapter": 8,
+      "stage": 4,
+      "title": "善意の設計図",
+      "portrait": "u05",
+      "paragraphs": [
+        "イオは局の装置を分解せず、まず配線図を読んだ。どこにも人を苦しめる目的は書かれていない。入力されるのは苦痛の予測、出力されるのは選択の停止だった。",
+        "苦痛を減らす方法が一種類しかない。その装置へ、住民の助け合いや道具の修理は入力できなかった。選ばないという答えだけが、何度も正しく計算される。",
+        "ユスティアは図の端に空いた端子を指した。制度を作った人にも、別の守り方を追加する余地が残されていた。壊す前に、そこへ何をつなぐかを考えた。"
+      ]
+    },
+    {
+      "id": "scene-8-8",
+      "chapter": 8,
+      "stage": 8,
+      "title": "救出の帳簿",
+      "portrait": "u03",
+      "paragraphs": [
+        "局の帳簿は、救出を人数だけで数えていた。助かった人の隣に、押し出されて消えた別の層の人数がある。セナは数字の欄に名前を追記しようとした。",
+        "名前を全て書くには帳簿が足りない。けれど書かないままなら、十人と十一人の差だけで誰かを決めてしまう。あなたたちは数字を捨てず、その隣へ暮らしを書く欄を増やした。",
+        "救った人数が多ければ責任がなくなるわけではない。人数が少なければ救出が無意味になるわけでもない。帳簿は答えを出す道具から、問いを忘れない道具へ変わる。"
+      ]
+    },
+    {
+      "id": "scene-8-12",
+      "chapter": 8,
+      "stage": 12,
+      "title": "制服を脱がない人",
+      "portrait": "u11",
+      "paragraphs": [
+        "ユスティアは局を離れても制服を脱がなかった。助けてもらった住民が、局の仕事を全て悪いものとして忘れられるのを恐れていた。",
+        "「ここで守れた人を消してから、新しい世界を作りたくない」彼女は凍結装置の停止手順と、生活の支給を続ける手順を別々に持ってきた。",
+        "敵の装置に勝つことと、そこに頼る人を見捨てないこと。その二つを同時に行うため、あなたたちは戦闘の後に残る仕事を分担した。"
+      ]
+    },
+    {
+      "id": "scene-9-1",
+      "chapter": 9,
+      "stage": 1,
+      "title": "大きくなりすぎた庭",
+      "portrait": "u06",
+      "paragraphs": [
+        "拠点の夜の庭に、知らない花が咲いた。エルが育てた種が、別の未明層から根を呼び寄せている。花は綺麗だが、その根の先で誰かの土地が薄くなっていた。",
+        "庭を守ることと、庭が奪うものを守ることは同じではない。エルは花を抜けずにいた。あなたは彼を責める前に、自分が庭の境界を描かなかったことを認めた。",
+        "救出のあとに残すべき図が、一枚足りなかった。あなたたちは地図を閉じず、庭の中で暮らす人と外で暮らす人を同じ机へ呼んだ。"
+      ]
+    },
+    {
+      "id": "scene-9-4",
+      "chapter": 9,
+      "stage": 4,
+      "title": "港から来た人々",
+      "portrait": "u07",
+      "paragraphs": [
+        "ミラが最初の港の住民を連れてきた。救出された人々は、自分たちが助けられた話を聞くより、次に何ができるかを尋ねた。",
+        "傘屋の店主は、庭の光を遮る布を縫えるという。船乗りは水の流れを変える杭を打てる。最初の救出で無用に見えた道具が、ここで仕事を持った。",
+        "あなたは支援する側とされる側を地図の別の色に分けるのをやめた。人は、いつも同じ側に立つわけではない。"
+      ],
+      "variants": [
+        {
+          "chapter": 1,
+          "choice": 0,
+          "text": "港の輪郭を残した地図が、住民の水路修復に使われた。灯台は帰る場所だけでなく、新しい庭の目印にもなった。"
+        },
+        {
+          "chapter": 1,
+          "choice": 1,
+          "text": "地図に書いた住民の名前をミラが順に呼んだ。知らない拠点でも、互いの仕事を頼むことができた。"
+        }
+      ]
+    },
+    {
+      "id": "scene-9-8",
+      "chapter": 9,
+      "stage": 8,
+      "title": "閉じる門の名札",
+      "portrait": "u02",
+      "paragraphs": [
+        "門を閉じる担当をガランが引き受けた。人を通したあとで閉じる門と、人を通さないために閉じる門は、見た目では区別がつかない。",
+        "彼は門の外へ、閉じる理由と再開の条件を書いた札を置く。事情を知らない人が、その門を永遠の拒絶だと思わないように。",
+        "あなたは札に責任者の名を加えた。自分の選択を、誰のものでもない規則へ隠さないためだった。"
+      ],
+      "variants": [
+        {
+          "chapter": 2,
+          "choice": 1,
+          "text": "硝子砦で剣から造った部材が、門の蝶番に使われた。武器だったものが、また開けるための仕事を持つ。"
+        }
+      ]
+    },
+    {
+      "id": "scene-9-12",
+      "chapter": 9,
+      "stage": 12,
+      "title": "小さくなる部屋",
+      "portrait": "u01",
+      "paragraphs": [
+        "拠点の未来を分ける案を話すと、住民はまず誰の部屋が減るのかを尋ねた。土地の面積だけを言えば済むと思っていたあなたは、答えに詰まった。",
+        "未来の部屋には、まだ買っていない机や、まだ招いていない友人がいる。その場所を差し出すことは、空き地を譲ることとは違った。",
+        "あなたは自分の部屋の図を机へ置いた。皆にも同じものを出させるためではない。提案した者が先に、その重さを隠さず示すために。"
+      ]
+    },
+    {
+      "id": "scene-10-1",
+      "chapter": 10,
+      "stage": 1,
+      "title": "海面の向こうの窓",
+      "portrait": "u10",
+      "paragraphs": [
+        "鏡海の底から見上げる街には、こちらの拠点と同じ窓があった。レイスはその窓を故郷と呼ばず、隣の暮らしと呼んだ。",
+        "地上だと信じていた世界にも、さらに上がある。しかし上にあるから本当で、下にあるから偽物という決まりは、どこにも書かれていない。",
+        "あなたが地図を上下逆にすると、リュカは笑った。「文字が読みにくくなるだけだね」上下を変えても、人の暮らしの重さは変わらなかった。"
+      ]
+    },
+    {
+      "id": "scene-10-4",
+      "chapter": 10,
+      "stage": 4,
+      "title": "欠けた雨音",
+      "portrait": "u09",
+      "paragraphs": [
+        "アステルが幾つもの世界の雨を並べて録音した。音のないもの、途中で切れるもの、誰かの声だけが残るもの。どの世界も欠けた場所を持っていた。",
+        "一つを完全な記録と決めて他を直そうとすると、残る違いが増える。欠落は故障の印でなく、別の選択を持つ印なのかもしれない。",
+        "あなたたちは雨音を一つに合成せず、聞く人が隣の音へ移れるように並べた。完全な一つの朝より、行き来できる幾つもの朝を作り始める。"
+      ]
+    },
+    {
+      "id": "scene-10-8",
+      "chapter": 10,
+      "stage": 8,
+      "title": "上へ行かない橋",
+      "portrait": "u05",
+      "paragraphs": [
+        "機械鳥の航路を、イオは橋の支柱へ写した。どちらが高い場所かを測らず、互いの荷物が行き来できる幅を測る。",
+        "レイスは橋を刃のように細くする案を退けた。「一人が通れれば十分な道は、逃げ道にはなる。でも暮らしの道には足りない」",
+        "あなたは橋の途中に、止まれる場所を描いた。零番線で学んだことが、世界をつなぐ図にも残る。"
+      ],
+      "variants": [
+        {
+          "chapter": 6,
+          "choice": 1,
+          "text": "駅で残した被害の記録を、橋の設計会議でも読んだ。通れる人だけを数えないための記録になった。"
+        }
+      ]
+    },
+    {
+      "id": "scene-10-12",
+      "chapter": 10,
+      "stage": 12,
+      "title": "海蛇の役目",
+      "portrait": "u10",
+      "paragraphs": [
+        "鏡の海蛇は橋の下に集まった影を食べていた。橋を架けるたび、残った未明層の重さがそこへ寄る。蛇を倒すだけでは橋は保てない。",
+        "あなたたちは蛇が通れる水路を残し、橋の基礎を少し外へずらした。戦いの目的は、その水路を作る時間を得ることになった。",
+        "敵と呼んだものの仕事を、誰かが引き継げるとは限らない。壊す前に、仕事が続く形を探す。港の門番の前で始めた問いが、ここでも戻ってくる。"
+      ]
+    },
+    {
+      "id": "scene-11-1",
+      "chapter": 11,
+      "stage": 1,
+      "title": "庭に置かれた名前",
+      "portrait": "u01",
+      "paragraphs": [
+        "白紙庭の入口に、あなたの名前が置かれていた。人の姿ではなく、窓や鍵と同じような小さな札だった。リュカはその札を地面から拾い、あなたへ渡す。",
+        "誰にも選ばれなかった役割に、どうして名前があるのか。彼女は答えを知らなかった。ただ、皆があなたを呼ぶために使ってきた名前だと言った。",
+        "起源が役割だからといって、途中で生まれた暮らしが消えるわけではない。あなたは札を胸に留め、庭の中へ歩き始めた。"
+      ]
+    },
+    {
+      "id": "scene-11-4",
+      "chapter": 11,
+      "stage": 4,
+      "title": "予言しない机",
+      "portrait": "u04",
+      "paragraphs": [
+        "ノアが机へ向かい、まだ一度も使っていない予言の紙を広げた。未来を読めば、あなたにとって有利な結末を選べるかもしれない。",
+        "彼は紙を折った。「君が選んだあとなら、結果を調べる手伝いはできる。選ぶ前に、君の言葉を一つへ狭めたくない」",
+        "あなたは未来を教えない人の沈黙を、役に立たないものとは思わなかった。自分で決めるために空いている場所を、誰かが守ってくれている。"
+      ]
+    },
+    {
+      "id": "scene-11-8",
+      "chapter": 11,
+      "stage": 8,
+      "title": "仕事を分ける地図",
+      "portrait": "u03",
+      "paragraphs": [
+        "セナは白紙の伝記を、皆の前で閉じた。あなた一人の本へ世界の接続を全て書き込むと、また誰か一人が支える仕組みに戻ってしまう。",
+        "門を描く人、門の条件を説明する人、修理する人、閉じる判断をする人。それぞれの記録を別の本へ分けることになった。",
+        "本の背を一冊ずつ並べると、白紙の伝記が少し薄くなった。空白を埋めたのでなく、抱える必要のなかった仕事を外へ出したのだった。"
+      ],
+      "variants": [
+        {
+          "chapter": 3,
+          "choice": 1,
+          "text": "書庫から記憶を受け取った住民が、条件を説明する役を引き受けた。渡した物語は、別の仕事として戻ってきた。"
+        }
+      ]
+    },
+    {
+      "id": "scene-11-12",
+      "chapter": 11,
+      "stage": 12,
+      "title": "五つの椅子",
+      "portrait": "u02",
+      "paragraphs": [
+        "庭の中央には五つの椅子があった。誰かが中央の一つを主人公の席にしようとすると、ガランは円に並べ直した。",
+        "自分の人生を固定するにしても、役割を皆へ分けるにしても、相談する場所は必要になる。正しい一人を決めるためでなく、違う答えを持つ人が座るために。",
+        "あなたは空いた椅子へ座った。選択の責任は消えない。それでも、選んだあとに誰にも会えない未来である必要はなかった。"
+      ]
+    },
+    {
+      "id": "scene-12-1",
+      "chapter": 12,
+      "stage": 1,
+      "title": "門を開く前の会議",
+      "portrait": "u11",
+      "paragraphs": [
+        "最後の門を前に、ユスティアは勝利の計画ではなく、開いたあとの当番表を配った。安寧局が支えていた配給や医療を、誰が引き継ぐかが書かれている。",
+        "戦える人だけでは表は埋まらない。傘屋、司書、庭師、配達人。未明層で出会った暮らしの仕事が、その表を少しずつ満たした。",
+        "装置を倒した日に世界が完成するわけではない。門を開くことは、次の日の仕事を皆で始めるための最初の工程になった。"
+      ]
+    },
+    {
+      "id": "scene-12-4",
+      "chapter": 12,
+      "stage": 4,
+      "title": "夜明けの順番",
+      "portrait": "u09",
+      "paragraphs": [
+        "全部の門を同時には開けない。アステルは接続する二つの地域を選ぶため、星の配置ではなく、道を待つ人々の手紙を並べた。",
+        "先になった地域が重要で、後になった地域が不要なのではない。その違いを知らせるため、各地域へ予定と再検討の日を送った。",
+        "待つ人に、永遠の待機を頼まない。零番線で止まる人の時刻を奪わなかったように、今度は待つ人の未来を固定しないようにする。"
+      ]
+    },
+    {
+      "id": "scene-12-8",
+      "chapter": 12,
+      "stage": 8,
+      "title": "借りた力の行き先",
+      "portrait": "u05",
+      "paragraphs": [
+        "イオは門の輪へ、支援の力を受け取る端子を付けた。遠くの友人が一度だけ力を送れる。渡る人を助ける側も、同じ戦場へ来る必要はない。",
+        "力を借りた人が強いという記録だけを残すと、送った人が見えなくなる。あなたは支援者の名前を門の記録へ並べた。",
+        "助けた回数を競うためではない。いつか逆の側に立つ日に、互いの道を頼めるようにするためだ。"
+      ],
+      "variants": [
+        {
+          "chapter": 7,
+          "choice": 0,
+          "text": "公開した鳥の航路を使い、遠い工房からも支援が届いた。公開した道の維持を、利用する人々も引き受けてくれた。"
+        }
+      ]
+    },
+    {
+      "id": "scene-12-12",
+      "chapter": 12,
+      "stage": 12,
+      "title": "明日の当番",
+      "portrait": "u01",
+      "paragraphs": [
+        "最後の戦いへ向かう直前、リュカはあなたへ小さな紙を渡した。明日の地図修復の当番表だった。あなたの名前も、ほかの人と同じ大きさで書かれている。",
+        "これから起きることの重要さを忘れたわけではない。勝っても負けても、世界を保つ仕事は誰かに残る。大きな結末のあとに、小さな次の日を置いておきたかった。",
+        "あなたは紙を折り、白紙の伝記へ挟んだ。書かれていない人生へ、初めて予定を一つ残す。門の向こうで、雨の音がした。"
+      ]
+    }
+  ]
+}

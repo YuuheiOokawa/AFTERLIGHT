@@ -1,0 +1,268 @@
+[
+  {
+    "id": "home",
+    "file": "generated/home.png",
+    "source": "generated/world-atlas.png",
+    "box": [
+      0,
+      0,
+      768,
+      512
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "map",
+    "file": "generated/map.png",
+    "source": "generated/world-atlas.png",
+    "box": [
+      768,
+      0,
+      1536,
+      512
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "battle",
+    "file": "generated/battle.png",
+    "source": "generated/world-atlas.png",
+    "box": [
+      0,
+      512,
+      768,
+      1024
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "gate",
+    "file": "generated/gate.png",
+    "source": "generated/world-atlas.png",
+    "box": [
+      768,
+      512,
+      1536,
+      1024
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "u01",
+    "file": "generated/u01.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "u02",
+    "file": "generated/u02.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "u03",
+    "file": "generated/u03.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "u04",
+    "file": "generated/u04.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "u05",
+    "file": "generated/u05.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "boss",
+    "file": "generated/boss.png",
+    "source": "generated/cast-atlas.png",
+    "box": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "button",
+    "file": "generated/button.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "panel",
+    "file": "generated/panel.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "card",
+    "file": "generated/card.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "compass",
+    "file": "generated/compass.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "crystal",
+    "file": "generated/crystal.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "sword",
+    "file": "generated/sword.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "shield",
+    "file": "generated/shield.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "amulet",
+    "file": "generated/amulet.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  },
+  {
+    "id": "book",
+    "file": "generated/book.png",
+    "source": "generated/ui-atlas.png",
+    "box": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "generation_method": "built-in imagegen",
+    "status": "prototype approved",
+    "note": "Equal-grid extraction; no repainting"
+  }
+]

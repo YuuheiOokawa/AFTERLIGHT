@@ -1,0 +1,12 @@
+[
+  {
+    "name": "new-cast",
+    "prompt": "Use case: stylized-concept. Asset type: sprite portrait atlas for original Japanese cosmic archive RPG AFTERLIGHT. ONE landscape image exact 3 columns by 2 rows equal grid, no gutters. Six completely distinct adult heroes with full heads and waist visible, a head-to-waist character in each tile. Top-left: gentle blond adult male botanist in white and green cloak with luminous flower. Top-middle: adult blue-haired woman courier in navy coat and brass wing brooch. Top-right: large adult brown-haired man wearing celestial knight armor and holding a navy spear. Bottom-left: adult auburn-haired woman astronomer with moon earrings and constellation sphere. Bottom-middle: adult dark-skinned man with short white hair, explorer blue-green mantle, ceremonial dual swords. Bottom-right: adult violet-haired woman former peace bureau officer with ivory gold uniform and floating seal rings. Rich premium painterly Japanese RPG style, navy/cyan/gold, original no existing franchise. Each image fills tile with midnight celestial background. No text, words, logos or labels.",
+    "method": "built-in imagegen"
+  },
+  {
+    "name": "enemies",
+    "prompt": "Use case: stylized-concept. Asset type: enemy sprite illustration atlas for original smartphone RPG AFTERLIGHT. ONE landscape image exact 3 by 2 equal grid six panels no gutters. Each enemy centered on dark navy background, entire creature readable and fitting tile, elaborate high-end painterly RPG illustrations, cyan nebula gold accents. Top-left: monstrous clockwork automaton shaped like a wingless bird with brass gears and glowing violet core. Top-middle: ancient floating blue spell book with chains and ghostlike pages shaped into wings. Top-right: enormous stag of black roots and luminous cyan antlers. Bottom-left: humanoid ivory gold faceless peace bureau judge with halo rings. Bottom-middle: celestial sea serpent made of mirrored glass and star water. Bottom-right: fortress-like armored guardian with a black shield and crimson seams. No captions, no existing characters, no logos, no watermarks.",
+    "method": "built-in imagegen"
+  }
+]
